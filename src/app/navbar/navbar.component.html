@@ -1,0 +1,18 @@
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="gamesTypes" >
+  <a class="navbar-brand" href="#">Games</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item" [ngClass]="{'active': currentTypeIndex === i}" *ngFor="let type of gamesTypes; let i=index"
+      (click)="typeChoose(type,i)" >
+        <a class="nav-link" href="#">{{type.Name}} <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<h1 *ngIf="currentTypeIndex === -1 && gamesTypes" >Choose a Type of a game</h1>

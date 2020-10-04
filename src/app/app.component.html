@@ -1,0 +1,5 @@
+<div *ngIf="!gamesData" >Loading...</div>
+<div *ngIf="gamesData">
+  <app-navbar [gamesTypes]="gamesData.GameTypes" (gotNewType)="onNewType($event)"></app-navbar>
+  <app-games-table [games]="currentgames"></app-games-table>
+</div>

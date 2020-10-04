@@ -1,0 +1,19 @@
+.gameTable{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  margin: 40px;
+  h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  img , h3{
+    width: 376px;
+
+  }
+  img {
+    height: 250px;
+  }
+}
